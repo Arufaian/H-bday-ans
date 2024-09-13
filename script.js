@@ -20,7 +20,7 @@ birthdayCard.addEventListener("click", function () {
 
   setTimeout(() => {
     happy.classList.toggle("invisible");
-    playAudio(``);
+    playAudio(`pf`);
   }, 120);
 
   if (clicked == 1) {
