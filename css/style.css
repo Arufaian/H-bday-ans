@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+/* p {
+  font-family: "Dancing Script", cursive;
+} */
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ff8a8a;
+}
+
+.birthdayCard {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  background-color: white;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 1s;
+}
+
+.rotate {
+  transform: perspective(2500px) rotate(7deg);
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    0px 20px 100px rgba(0, 0, 0, 0.5);
+}
+
+.open {
+  transform: rotateY(-120deg);
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.cardFonts {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  background-color: white;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    30px 0px 50px rgba(0, 0, 0, 0.4);
+
+  transition: 1s;
+}
+
+.happy {
+  text-align: center;
+  margin: 30px;
+  font-size: 32px;
+  font-family: "Dancing Script", cursive;
+  transition: 0.2s;
+}
+
+.balloons {
+  position: absolute;
+}
+
+.ballons-1,
+.ballons-2,
+.ballons-3,
+.ballons-4 {
+  position: absolute;
+  width: 85px;
+  height: 95px;
+  border-radius: 50%;
+}
+
+.ballons-1 {
+  background-color: rgb(91, 188, 255, 0.8);
+  left: -10px;
+  top: 50px;
+}
+
+.ballons-2 {
+  background-color: rgb(255, 75, 145, 0.8);
+  left: 50px;
+  top: 20px;
+}
+
+.ballons-3 {
+  background-color: rgb(255, 205, 75, 0.8);
+  left: 110px;
+  top: 50px;
+}
+
+.ballons-4 {
+  background-color: rgba(166, 255, 150, 0.8);
+  left: 170px;
+  top: 50px;
+}
+
+.ballons-1::before,
+.ballons-2::before,
+.ballons-3::before,
+.ballons-4::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 155px;
+  background-color: #f2613f;
+  top: 95px;
+  left: 43px;
+}
+
+.ballons-1::after,
+.ballons-2::after,
+.ballons-3::after,
+.ballons-4::after {
+  content: "";
+  position: absolute;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  top: 94px;
+  left: 37px;
+}
+
+.ballons-1::after {
+  border-bottom: 10px solid rgb(91, 188, 255);
+}
+
+.ballons-2::after {
+  border-bottom: 10px solid rgb(255, 75, 145);
+}
+
+.ballons-3::after {
+  border-bottom: 10px solid rgb(255, 205, 75);
+}
+
+.ballons-4::after {
+  border-bottom: 10px solid rgba(166, 255, 150, 0.8);
+}
+
+.insideCard {
+  position: absolute;
+  background-color: white;
+  width: 250px;
+  height: 350px;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  font-family: "Dancing Script", cursive;
+  margin: 30px;
+  font-size: 18px;
+}
+
+.name {
+  position: absolute;
+  left: 150px;
+  top: 275px;
+}
+
+.back {
+  text-align: center;
+  margin: 30px;
+  font-size: 24px;
+  font-family: "Dancing Script", cursive;
+}
