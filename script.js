@@ -2,6 +2,8 @@ let birthdayCard = document.querySelector(".birthdayCard");
 let cardFonts = document.querySelector(".cardFonts");
 let happy = document.querySelector(".happy");
 
+alert("test");
+
 let clicked = 0;
 
 // fungsi play audio
