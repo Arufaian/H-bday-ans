@@ -6,13 +6,11 @@ let clicked = 0;
 
 // fungsi play audio
 function playAudio(name) {
-  let audio = new Audio(name);
+  let audio = new Audio(`./audio/${name}.mp3`);
   audio.play();
 }
 
-let cardSfx = new Audio(
-  "../assets/Page Flip Sound Effect No copyrhgt ...sound effect LNC.mp3"
-);
+let cardSfx = new Audio("pf");
 
 birthdayCard.addEventListener("click", function () {
   clicked++;
@@ -22,12 +20,10 @@ birthdayCard.addEventListener("click", function () {
 
   setTimeout(() => {
     happy.classList.toggle("invisible");
+    playAudio(``);
   }, 120);
-  playAudio(
-    "../assets/Page Flip Sound Effect No copyrhgt ...sound effect LNC.mp3"
-  );
 
   if (clicked == 1) {
-    playAudio("../assets/piano.mp3");
+    playAudio("piano");
   }
 });
