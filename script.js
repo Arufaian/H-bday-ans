@@ -8,7 +8,7 @@ let clicked = 0;
 
 // fungsi play audio
 function playAudio(name) {
-  let audio = new Audio(`./audio/${name}.mp3`);
+  let audio = new Audio(`/audio/${name}.mp3`);
   audio.play();
 }
 
